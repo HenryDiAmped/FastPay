@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E9A3521-5021-411E-8E09-494BAF422946}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FastPay</RootNamespace>
+    <AssemblyName>FastPay</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppCompras.Designer.cs">
+      <DependentUpon>AppCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cola.cs" />
+    <Compile Include="Grafo.cs" />
+    <Compile Include="Ingresar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingresar.Designer.cs">
+      <DependentUpon>Ingresar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaEnlazada.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mapa.Designer.cs">
+      <DependentUpon>Mapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NodoCola.cs" />
+    <Compile Include="NodoGrafo.cs" />
+    <Compile Include="NodoLista.cs" />
+    <Compile Include="Producto.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registrarse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrarse.Designer.cs">
+      <DependentUpon>Registrarse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RJButtom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Transferir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transferir.Designer.cs">
+      <DependentUpon>Transferir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="AppCompras.resx">
+      <DependentUpon>AppCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingresar.resx">
+      <DependentUpon>Ingresar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapa.resx">
+      <DependentUpon>Mapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Registrarse.resx">
+      <DependentUpon>Registrarse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transferir.resx">
+      <DependentUpon>Transferir.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo Negro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transferir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Servicios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mapa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MapaCiudad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MapaCiudad2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\autorojo-remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comidas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bebidas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mascotas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aparatos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arroz con pollo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ensaluda rusa.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aji de pollo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\encebollado.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tallarines rojos.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chufa.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ceviche.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\olluquito.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cocacola.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inkakola.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vino.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coctel.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerveza.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ron.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chicha.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maracuya.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\croqueta perro.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\croqueta gato.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ropa animal.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correa.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shampoo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collar perro.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pelota perro.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hueso perro.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audifono.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lentes VR.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mouse.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mando PS.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camara.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\celular.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tablet.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
